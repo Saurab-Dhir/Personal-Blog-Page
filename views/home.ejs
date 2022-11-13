@@ -1,0 +1,17 @@
+
+<%- include("partials/header") -%>
+
+<h1>Home</h1>
+
+<%=  pageContent %>
+
+<br>
+
+<% for (let i=0; i<allPosts.length; i++){ %>
+    <h2><a href= "#"> <%= allPosts[i].title %>  </a></h2>
+    <p><%= allPosts[i].post %></p>
+<%} %>
+
+
+
+<%- include("partials/footer") -%>

@@ -8,10 +8,10 @@
 <br>
 
 <% for (let i=0; i<allPosts.length; i++){ %>
-    <h2><a href= "#"> <%= allPosts[i].title %>  </a></h2>
-    <p><%= allPosts[i].post %></p>
-<%} %>
+    <h2><a href= "#"> <%= allPosts[i].title %> </a></h2>
+    <p class="mainPageText"><%= allPosts[i].post.substring(0,100); %></p><a href="/posts/<%= allPosts[i].title %>" >... Read more</a>
 
+<%} %>
 
 
 <%- include("partials/footer") -%>

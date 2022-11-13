@@ -27,7 +27,7 @@ app.get("/", function(req, res) {
 app.get("/home", function(req, res) {
   res.render("home.ejs", {
     pageContent: homeStartingContent,
-    allPosts: allPosts
+    allPosts: allPosts,
   })
 });
 
@@ -48,7 +48,6 @@ app.get("/compose", function(req, res) {
 });
 
 app.get('/posts/:pageTitle', function(req, res) {
-
   const requestedTitle = _.lowerCase(req.params.pageTitle);
 
   allPosts.forEach(function(compose) {
